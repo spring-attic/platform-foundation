@@ -138,6 +138,7 @@
 		<jredis.version>06052013</jredis.version>
 		<jruby.version>1.7.12</jruby.version>
 		<jsch.version>0.1.51</jsch.version>
+		<jsonassert.version>1.2.3</jsonassert.version>
 		<json-path.version>0.9.1</json-path.version>
 		<jsr250.version>1.0</jsr250.version>
 		<jxl.version>2.6.12</jxl.version>
@@ -1304,6 +1305,11 @@
 				<groupId>org.quartz-scheduler</groupId>
 				<artifactId>quartz</artifactId>
 				<version>${quartz.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.skyscreamer</groupId>
+				<artifactId>jsonassert</artifactId>
+				<version>${jsonassert.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.testng</groupId>
