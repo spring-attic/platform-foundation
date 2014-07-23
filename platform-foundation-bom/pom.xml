@@ -167,6 +167,7 @@
 		<pig.version>0.12.0</pig.version>
 		<poi.version>3.10-FINAL</poi.version>
 		<protobuf.version>2.5.0</protobuf.version>
+		<protobuf-java-format.version>1.2</protobuf-java-format.version>
 		<qdox.version>1.12.1</qdox.version>
 		<quartz.version>2.2.1</quartz.version>
 		<querydsl.version>3.3.3</querydsl.version>
@@ -465,6 +466,11 @@
 				<groupId>com.google.protobuf</groupId>
 				<artifactId>protobuf-java</artifactId>
 				<version>${protobuf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.googlecode.protobuf-java-format</groupId>
+				<artifactId>protobuf-java-format</artifactId>
+				<version>${protobuf-java-format.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.ibm.jbatch</groupId>
