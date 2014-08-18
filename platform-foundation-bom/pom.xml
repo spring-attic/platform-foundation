@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.1.4.RELEASE</version>
+		<version>1.2.0.BUILD-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
@@ -45,8 +45,6 @@
 	</developers>
 
 	<properties>
-		<spring.version>4.1.0.BUILD-SNAPSHOT</spring.version>
-		<spring-cloud.version>1.0.0.RELEASE</spring-cloud.version>
 		<spring-data-hadoop.version>2.0.1.RELEASE</spring-data-hadoop.version>
 		<spring-integration-splunk.version>1.1.0.BUILD-SNAPSHOT</spring-integration-splunk.version>
 		<spring-ldap.version>2.0.2.RELEASE</spring-ldap.version>
@@ -54,7 +52,7 @@
 		<spring-retry.version>1.1.0.RELEASE</spring-retry.version>
 		<spring-security-oauth.version>2.0.2.RELEASE</spring-security-oauth.version>
 		<spring-web-flow.version>2.4.0.RELEASE</spring-web-flow.version>
-		<spring-web-services.version>2.2.0.RELEASE</spring-web-services.version>
+		<spring-web-services.version>${spring-ws.version}</spring-web-services.version>
 
 		<ant.version>1.9.3</ant.version>
 		<antlr.version>2.7.7</antlr.version>
