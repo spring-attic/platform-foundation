@@ -149,6 +149,7 @@
 		<ldapsdk.version>4.1</ldapsdk.version>
 		<lettuce.version>2.3.3</lettuce.version>
 		<lmax-disruptor.version>3.2.1</lmax-disruptor.version>
+		<lombok.version>1.14.4</lombok.version>
 		<myfaces.version>2.1.9</myfaces.version>
 		<openhft-chronicle.version>2.0.3</openhft-chronicle.version>
 		<openhft-lang.version>6.1.4</openhft-lang.version>
@@ -1347,6 +1348,11 @@
 				<groupId>org.openid4java</groupId>
 				<artifactId>openid4java-nodeps</artifactId>
 				<version>${openid4java.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.quartz-scheduler</groupId>
