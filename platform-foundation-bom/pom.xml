@@ -142,6 +142,7 @@
 		<jsch.version>0.1.51</jsch.version>
 		<jsonassert.version>1.2.3</jsonassert.version>
 		<json-path.version>0.9.1</json-path.version>
+		<jsr166e.version>1.0</jsr166e.version>
 		<jsr250.version>1.0</jsr250.version>
 		<jxl.version>2.6.12</jxl.version>
 		<kite.version>0.13.0</kite.version>
@@ -149,6 +150,7 @@
 		<ldapsdk.version>4.1</ldapsdk.version>
 		<lettuce.version>2.3.3</lettuce.version>
 		<lmax-disruptor.version>3.2.1</lmax-disruptor.version>
+		<lombok.version>1.14.4</lombok.version>
 		<myfaces.version>2.1.9</myfaces.version>
 		<openhft-chronicle.version>2.0.3</openhft-chronicle.version>
 		<openhft-lang.version>6.1.4</openhft-lang.version>
@@ -661,6 +663,11 @@
 				<groupId>dom4j</groupId>
 				<artifactId>dom4j</artifactId>
 				<version>${dom4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.gatling</groupId>
+				<artifactId>jsr166e</artifactId>
+				<version>${jsr166e.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.netty</groupId>
@@ -1347,6 +1354,11 @@
 				<groupId>org.openid4java</groupId>
 				<artifactId>openid4java-nodeps</artifactId>
 				<version>${openid4java.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.quartz-scheduler</groupId>
