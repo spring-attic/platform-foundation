@@ -141,6 +141,7 @@
 		<jsch.version>0.1.51</jsch.version>
 		<jsonassert.version>1.2.3</jsonassert.version>
 		<json-path.version>0.9.1</json-path.version>
+		<jsr166e.version>1.0</jsr166e.version>
 		<jsr250.version>1.0</jsr250.version>
 		<jxl.version>2.6.12</jxl.version>
 		<kite.version>0.13.0</kite.version>
@@ -660,6 +661,11 @@
 				<groupId>dom4j</groupId>
 				<artifactId>dom4j</artifactId>
 				<version>${dom4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.gatling</groupId>
+				<artifactId>jsr166e</artifactId>
+				<version>${jsr166e.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.netty</groupId>
