@@ -54,6 +54,7 @@ class MavenDependenciesTests extends AbstractDependenciesTests {
 		def request = new DefaultInvocationRequest()
 		request.setBaseDirectory(testDir)
 		request.setGoals(["package"])
+		request.setUpdateSnapshots(true)
 		def result = new DefaultInvoker().execute(request);
 		if (result.executionException) {
 			throw result.executionException
