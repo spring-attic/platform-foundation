@@ -38,16 +38,37 @@ public class BomTests {
 	
 	@Test
 	void versionPropertiesAreNotOverridden() {
+		def expectedOverrides = ['spring-integration.version', 'spring-amqp.version']
 		def versions = extractVersionsFromPom(bootDependenciesPom)
-		def duplicateVersions = extractVersionsFromPom(platformBom)
-				.findAll { key, value -> versions.containsKey(key) && versions[key] != value}
-				.collect { "${it.key}=${versions[it.key]} -> ${it.value}" }
+		
+		def overriddenVersions = [:]
+		extractVersionsFromPom(platformBom)
+				.findAll { key, value -> versions.containsKey(key) && versions[key] != value }
+				.each { overriddenVersions[it.key] = "${versions[it.key]} -> ${it.value}" }
 				
-		if (duplicateVersions) {
-			String message = "The following versions are overridden:"
-			duplicateVersions.each {
+		def missingOverrides = expectedOverrides.findAll { !overriddenVersions.containsKey(it) }
+		
+		expectedOverrides.each { overriddenVersions.remove it }
+				
+		String message = ''
+		if (overriddenVersions) {
+			message += "The following versions are overridden:"
+			overriddenVersions.each {
 				message += "\n    $it"
 			}
+		}
+
+		if (missingOverrides) {
+			if (message) {
+				message += '\n'
+			}
+			message += "The following versions were not overridden:"
+			missingOverrides.each {
+				message += "\n    $it"
+			}
+		}
+
+		if (message.length() > 0) {
 			fail(message)
 		}
 	}
