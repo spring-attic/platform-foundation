@@ -20,5 +20,9 @@ repositories {
 	mavenCentral()
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
 	versionManagement files('../dependency/platform-foundation-bom.properties')
