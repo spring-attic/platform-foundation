@@ -1253,21 +1253,6 @@
 				<version>${smack4.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.igniterealtime.smack</groupId>
-				<artifactId>smack-extensions</artifactId>
-				<version>${smack4.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.igniterealtime.smack</groupId>
-				<artifactId>smack-resolver-javax</artifactId>
-				<version>${smack4.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.igniterealtime.smack</groupId>
-				<artifactId>smack-tcp</artifactId>
-				<version>${smack4.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>org.jasig.cas.client</groupId>
 				<artifactId>cas-client-core</artifactId>
 				<version>${cas-client.version}</version>
