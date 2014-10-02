@@ -2,3 +2,7 @@ target
 .classpath
 .project
 .settings
+/.idea
+/platform-foundation-bom/*.iml
+/*.iml
+/platform-foundation-tests/*.iml
