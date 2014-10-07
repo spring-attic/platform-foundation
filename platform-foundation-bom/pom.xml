@@ -403,11 +403,6 @@
 				<version>${kryo.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.fasterxml.jackson.dataformat</groupId>
-				<artifactId>jackson-dataformat-xml</artifactId>
-				<version>${jackson.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>com.fasterxml.jackson.datatype</groupId>
 				<artifactId>jackson-datatype-hibernate4</artifactId>
 				<version>${jackson.version}</version>
