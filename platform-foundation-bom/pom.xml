@@ -155,7 +155,6 @@
 		<nekohtml.version>1.9.21</nekohtml.version>
 		<neo4j.version>2.0.4</neo4j.version>
 		<neo4j-cypher-dsl.version>2.0.1</neo4j-cypher-dsl.version>
-		<neo4j-graph-collections.version>0.7.1-neo4j-2.0.1</neo4j-graph-collections.version>
 		<neo4j-spatial.version>0.12-neo4j-2.0.1</neo4j-spatial.version>
 		<netty.version>4.0.23.Final</netty.version>
 		<objenesis.version>2.1</objenesis.version>
@@ -1262,11 +1261,6 @@
 				<groupId>org.neo4j</groupId>
 				<artifactId>neo4j-cypher-dsl</artifactId>
 				<version>${neo4j-cypher-dsl.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.neo4j</groupId>
-				<artifactId>neo4j-graph-collections</artifactId>
-				<version>${neo4j-graph-collections.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.neo4j</groupId>
