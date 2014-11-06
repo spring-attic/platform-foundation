@@ -1048,6 +1048,11 @@
 				<version>${tomcat.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-websocket</artifactId>
+				<version>${tomcat.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.apache.xmlbeans</groupId>
 				<artifactId>xmlbeans</artifactId>
 				<version>${xmlbeans.version}</version>
