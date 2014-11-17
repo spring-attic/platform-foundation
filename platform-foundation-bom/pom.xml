@@ -48,6 +48,7 @@
 		<spring-amqp.version>1.4.0.BUILD-SNAPSHOT</spring-amqp.version>
 		<spring-data-hadoop.version>2.0.3.RELEASE</spring-data-hadoop.version>
 		<spring-integration.version>4.1.0.BUILD-SNAPSHOT</spring-integration.version>
+		<spring-integration-flow.version>1.0.0.BUILD-SNAPSHOT</spring-integration-flow.version>
 		<spring-integration-splunk.version>1.1.0.BUILD-SNAPSHOT</spring-integration-splunk.version>
 		<spring-ldap.version>2.0.2.RELEASE</spring-ldap.version>
 		<spring-plugin.version>1.1.0.RELEASE</spring-plugin.version>
@@ -250,6 +251,13 @@
 				<groupId>org.springframework.data</groupId>
 				<artifactId>spring-yarn-test</artifactId>
 				<version>${spring-data-hadoop.version}</version>
+			</dependency>
+
+			<!-- Spring Integration Flow -->
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-flow</artifactId>
+				<version>${spring-integration-flow.version}</version>
 			</dependency>
 
 			<!-- Spring Integration Splunk -->
