@@ -187,7 +187,6 @@
 		<tiles-request.version>1.0.1</tiles-request.version>
 		<tyrus.version>1.3.5</tyrus.version>
 		<typica.version>1.3</typica.version>
-		<undertow.version>1.0.17.Final</undertow.version>
 		<velocity-tools-view.version>1.4</velocity-tools-view.version>
 		<websphere-uow.version>6.0.2.17</websphere-uow.version>
 		<woodstox.version>4.2.1</woodstox.version>
@@ -662,16 +661,6 @@
 				<groupId>io.netty</groupId>
 				<artifactId>netty-all</artifactId>
 				<version>${netty.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.undertow</groupId>
-				<artifactId>undertow-core</artifactId>
-				<version>${undertow.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.undertow</groupId>
-				<artifactId>undertow-servlet</artifactId>
-				<version>${undertow.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.undertow</groupId>
