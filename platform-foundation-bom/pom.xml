@@ -663,11 +663,6 @@
 				<version>${netty.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.undertow</groupId>
-				<artifactId>undertow-websockets-jsr</artifactId>
-				<version>${undertow.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>javax.activation</groupId>
 				<artifactId>activation</artifactId>
 				<version>${javax-activation.version}</version>
