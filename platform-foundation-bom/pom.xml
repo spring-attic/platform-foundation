@@ -94,7 +94,7 @@
 		<evo-inflector.version>1.1</evo-inflector.version>
 		<findbugs-jsr305.version>2.0.3</findbugs-jsr305.version>
 		<gpars.version>1.2.1</gpars.version>
-		<gs-collections.version>5.0.0</gs-collections.version>
+		<gs-collections.version>5.1.0</gs-collections.version>
 		<guava.version>17.0</guava.version>
 		<guice.version>3.0</guice.version>
 		<hadoop.version>2.2.0</hadoop.version>
@@ -169,7 +169,7 @@
 		<protobuf-java-format.version>1.2</protobuf-java-format.version>
 		<qdox.version>1.12.1</qdox.version>
 		<quartz.version>2.2.1</quartz.version>
-		<querydsl.version>3.3.4</querydsl.version>
+		<querydsl.version>3.4.3</querydsl.version>
 		<rabbit-amqp-client.version>3.4.2</rabbit-amqp-client.version>
 		<rometools.version>1.5.0</rometools.version>
 		<smack.version>3.2.1</smack.version>
