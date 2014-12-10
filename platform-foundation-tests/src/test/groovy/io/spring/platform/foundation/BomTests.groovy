@@ -5,13 +5,13 @@ import org.junit.Test
 import static org.junit.Assert.fail
 
 public class BomTests {
-	
+
 	@Test
 	void dependencyManagementIsNotDuplicated() {
 		def dependencies = extractDependenciesFromPom(bootDependenciesPom)
 		def duplicateDependencies = extractDependenciesFromPom(platformBom)
 				.findAll { dependencies.contains(it) }
-				
+
 		if (duplicateDependencies) {
 			String message = "The following dependencies are duplicates:"
 			duplicateDependencies.each {
@@ -20,37 +20,36 @@ public class BomTests {
 			fail(message)
 		}
 	}
-	
+
 	@Test
 	void versionPropertiesAreNotDuplicated() {
 		def versions = extractVersionsFromPom(bootDependenciesPom)
 		def duplicateVersions = extractVersionsFromPom(platformBom)
 				.findAll { key, value -> versions.containsKey(key) && versions[key] == value}
-				
+
 		if (duplicateVersions) {
 			String message = "The following versions are duplicates:"
 			duplicateVersions.each {
 				message += "\n    $it"
-			}		
+			}
 			fail(message)
 		}
 	}
-	
+
 	@Test
 	void versionPropertiesAreNotOverridden() {
-		def expectedOverrides = ['spring-integration.version', 'spring-amqp.version',
-				'tomcat.version', 'jetty.version', 'servlet-api.version']
+		def expectedOverrides = ['tomcat.version', 'jetty.version', 'servlet-api.version']
 		def versions = extractVersionsFromPom(bootDependenciesPom)
-		
+
 		def overriddenVersions = [:]
 		extractVersionsFromPom(platformBom)
 				.findAll { key, value -> versions.containsKey(key) && versions[key] != value }
 				.each { overriddenVersions[it.key] = "${versions[it.key]} -> ${it.value}" }
-				
+
 		def missingOverrides = expectedOverrides.findAll { !overriddenVersions.containsKey(it) }
-		
+
 		expectedOverrides.each { overriddenVersions.remove it }
-				
+
 		String message = ''
 		if (overriddenVersions) {
 			message += "The following versions are overridden:"
@@ -73,8 +72,8 @@ public class BomTests {
 			fail(message)
 		}
 	}
-	
-	
+
+
 	def getBootDependenciesPom() {
 		def uri = "https://repo.spring.io/libs-snapshot/org/springframework/boot/spring-boot-dependencies/$bootVersion"
 		String version = bootVersion
@@ -84,27 +83,27 @@ public class BomTests {
 		}
 		new URL("$uri/spring-boot-dependencies-${version}.pom").text
 	}
-	
+
 	def getPlatformBom() {
 		new File('target/dependency/platform-foundation-bom.pom').text
 	}
-	
+
 	String getBootVersion() {
 		new XmlSlurper()
 			.parse(new File('target/dependency/platform-foundation-bom.pom'))
 			.parent.version.text()
 	}
-	
+
 	def extractDependenciesFromPom(def pom) {
 		def dependencies = new XmlSlurper().parseText(pom)
 			.dependencyManagement.dependencies.dependency
 			.collect { getIdForDependency(it)}
 	}
-	
+
 	def getIdForDependency(dependency) {
 		"${dependency.groupId}:${dependency.artifactId}"
 	}
-	
+
 	Map extractVersionsFromPom(def pom) {
 		Map versions = [:]
 		new XmlParser().parseText(pom)
