@@ -143,6 +143,7 @@
 		<json-patch.version>1.7</json-patch.version>
 		<jsr166e.version>1.0</jsr166e.version>
 		<jsr250.version>1.0</jsr250.version>
+		<junit.version>4.11</junit.version>
 		<jxl.version>2.6.12</jxl.version>
 		<kite.version>0.13.0</kite.version>
 		<kryo.version>2.22</kryo.version>
